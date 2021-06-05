@@ -1,4 +1,25 @@
+# Download Data Files
 
+You can use either `DownloadDataFiles.ps1` or `DownloadDataFilesMultiThreaded.ps1`.  As the name suggests on the latter, the multi-threaded version will download 10 files concurrently.  Concurrency can be adjusted as required.
+
+As of June 5, 2021, the full download (compressed format) will require 1.5TB of storage.
+
+Both scripts will create sub directories based on `current working directory` of the execution context.  The directory structure will be as follows:
+
+```
+$pwd
+  \raw
+    \year1
+      \file1
+      \file2
+    \year2
+      \file1
+      \file2
+```
+
+# Extract Data Files
+
+Use `ExtractFiles.ps1` to extract the zip files from the `raw` directory into `extracted` directory.  This `extracted` directory will be created automatically.  The script will extract the files based on year sub directories.
 
 # Migrate files to different drive using Robocopy
 
