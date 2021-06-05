@@ -21,7 +21,7 @@ $pwd
 
 Use `ExtractFiles.ps1` to extract the zip files from the `raw` directory into `extracted` directory.  This `extracted` directory will be created automatically.  The script will extract the files based on year sub directories.
 
-# Migrate files to different drive using Robocopy
+# Migrate files to different location using Robocopy
 
 ```cmd
 robocopy f:\ e:\ /E /Z /ZB /R:5 /W:5 /TBD /NP /V /MT:16
