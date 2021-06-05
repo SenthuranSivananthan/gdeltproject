@@ -36,21 +36,24 @@ function DownloadData($limitToYears)
 
             if (-not(Test-Path -Path $downloadSaveLocation))
             {
-                Write-Host "Downloading: $downloadUrl"
+                Write-Host "Record $recordCount - Downloading: $downloadUrl"
                 Invoke-WebRequest -Uri $downloadUrl -OutFile $downloadSaveLocation
             }
             else
             {
-                Write-Host "Exists.  Skipped $downloadUrl"
+                Write-Host "Record $recordCount - Exists.  Skipped $downloadUrl"
             }
         }
         else
         {
-            Write-Host "Skipped, file not in included years: $limitToYears.  Skipped $downloadUrl"
+            Write-Host "Record $recordCount - File not in included years: $limitToYears.  Skipped $downloadUrl"
         }
     }
+
+    Write-Host "Processed $recordCount files"
+    Write-Host "Done!"
 }
 
-$limitYears = 2019, 2020
-#$limitYears = $()
+#$limitYears = 2020, 2021
+$limitYears = $()
 DownloadData $limitYears
