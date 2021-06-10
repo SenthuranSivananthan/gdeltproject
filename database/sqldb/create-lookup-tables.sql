@@ -17,8 +17,8 @@ CREATE TABLE LOOKUP_ETHNIC (
 );
 
 CREATE TABLE LOOKUP_EVENT_CODES (
- Code varchar(3),
- Label varchar(255)
+ Code varchar(4),
+ Label varchar(500)
 );
 
 CREATE TABLE LOOKUP_KNOWN_GROUPS (
@@ -40,4 +40,3 @@ CREATE TABLE LOOKUP_GOLDSTEIN_SCALE (
  Code int,
  Scale float
 );
-
