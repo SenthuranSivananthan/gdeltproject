@@ -1,4 +1,4 @@
-function ExtractFiles
+function ExtractFiles($limitToYears)
 {
     $RAW_DATA_BASEFOLDER = "$pwd\raw"
     $EXTRACTED_DATA_BASEFOLDER = "$pwd\extracted"
@@ -6,19 +6,24 @@ function ExtractFiles
     New-Item -Path $EXTRACTED_DATA_BASEFOLDER -ItemType Directory -Force
 
     Get-ChildItem -Path $RAW_DATA_BASEFOLDER | ForEach-Object {
-        # Create Directory
-        $DestinationDirectory = "$EXTRACTED_DATA_BASEFOLDER\$_"
+        if ($limitToYears.Length -eq 0 -or $limitToYears -contains $_.BaseName) {
+            # Create Directory
+            $DestinationDirectory = "$EXTRACTED_DATA_BASEFOLDER\$_"
 
-        New-Item -Path $DestinationDirectory -ItemType Directory -Force
+            New-Item -Path $DestinationDirectory -ItemType Directory -Force
 
-        # Find all files in folder
-        Get-ChildItem -Path $_.FullName | ForEach-Object {
-            Write-Host "Extracting" $_.FullName
+            # Find all files in folder
+            Get-ChildItem -Path $_.FullName | ForEach-Object {
+                Write-Host "Extracting" $_.FullName
             
-            # Extract files
-            Expand-Archive -LiteralPath $_.FullName -DestinationPath $DestinationDirectory -Force
+                # Extract files
+                Expand-Archive -LiteralPath $_.FullName -DestinationPath $DestinationDirectory -Force
+            }
         }
     }
 }
 
-ExtractFiles
+$limitYears = 2021
+#$limitYears = $()
+
+ExtractFiles $limitYears
