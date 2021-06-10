@@ -1,0 +1,272 @@
+{
+	"name": "SQLDB",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "GLOBALEVENTID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SQLDATE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MonthYear",
+				"type": "varchar"
+			},
+			{
+				"name": "Year",
+				"type": "varchar"
+			},
+			{
+				"name": "FractionDate",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 0
+			},
+			{
+				"name": "Actor1Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor1Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor1CountryCode",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor1KnownGroupCode",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor1EthnicCode",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor1Religion1Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor1Religion2Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor1Type1Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor1Type2Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor1Type3Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor2Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor2Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor2CountryCode",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor2KnownGroupCode",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor2EthnicCode",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor2Religion1Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor2Religion2Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor2Type1Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor2Type2Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor2Type3Code",
+				"type": "varchar"
+			},
+			{
+				"name": "IsRootEvent",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "EventCode",
+				"type": "varchar"
+			},
+			{
+				"name": "EventBaseCode",
+				"type": "varchar"
+			},
+			{
+				"name": "EventRootCode",
+				"type": "varchar"
+			},
+			{
+				"name": "QuadClass",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "GoldsteinScale",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 0
+			},
+			{
+				"name": "NumMentions",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "NumSources",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "NumArticles",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "AvgTone",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 0
+			},
+			{
+				"name": "Actor1Geo_Type",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Actor1Geo_FullName",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor1Geo_CountryCode",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor1Geo_ADM1Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor1Geo_Lat",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Actor1Geo_Long",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Actor1Geo_FeatureID",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor2Geo_Type",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Actor2Geo_FullName",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor2Geo_CountryCode",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor2Geo_ADM1Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Actor2Geo_Lat",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Actor2Geo_Long",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Actor2Geo_FeatureID",
+				"type": "varchar"
+			},
+			{
+				"name": "ActionGeo_Type",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ActionGeo_FullName",
+				"type": "varchar"
+			},
+			{
+				"name": "ActionGeo_CountryCode",
+				"type": "varchar"
+			},
+			{
+				"name": "ActionGeo_ADM1Code",
+				"type": "varchar"
+			},
+			{
+				"name": "ActionGeo_Lat",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "ActionGeo_Long",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "ActionGeo_FeatureID",
+				"type": "varchar"
+			},
+			{
+				"name": "DATEADDED",
+				"type": "varchar"
+			},
+			{
+				"name": "SOURCEURL",
+				"type": "text"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "GDELT_DAILYUPDATES"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

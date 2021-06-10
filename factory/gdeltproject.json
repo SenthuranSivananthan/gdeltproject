@@ -1,0 +1,9 @@
+{
+	"name": "gdeltproject",
+	"location": "canadacentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "cca25865-5452-49fe-b1c3-43d6785173dc",
+		"tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+	}
+}
