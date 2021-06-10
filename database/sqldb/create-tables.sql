@@ -8,7 +8,7 @@ CREATE TABLE GDELT_DAILYUPDATES (
  MonthYear varchar(6) , 
  Year varchar(4) , 
  FractionDate NUMERIC , 
- Actor1Code varchar(3) , 
+ Actor1Code varchar(15) , 
  Actor1Name varchar(255) , 
  Actor1CountryCode varchar(3) , 
  Actor1KnownGroupCode varchar(3) , 
@@ -18,7 +18,7 @@ CREATE TABLE GDELT_DAILYUPDATES (
  Actor1Type1Code varchar(3) , 
  Actor1Type2Code varchar(3) , 
  Actor1Type3Code varchar(3) , 
- Actor2Code varchar(3) , 
+ Actor2Code varchar(15) , 
  Actor2Name varchar(255) , 
  Actor2CountryCode varchar(3) , 
  Actor2KnownGroupCode varchar(3) , 
@@ -51,7 +51,7 @@ CREATE TABLE GDELT_DAILYUPDATES (
  Actor2Geo_ADM1Code varchar(4) , 
  Actor2Geo_Lat float , 
  Actor2Geo_Long float , 
- Actor2Geo_FeatureID int , 
+ Actor2Geo_FeatureID varchar(10) , 
  ActionGeo_Type int , 
  ActionGeo_FullName varchar(255) , 
  ActionGeo_CountryCode varchar(2) , 
@@ -60,5 +60,5 @@ CREATE TABLE GDELT_DAILYUPDATES (
  ActionGeo_Long float , 
  ActionGeo_FeatureID varchar(10) , 
  DATEADDED varchar(255) ,
- SOURCEURL varchar(255)
+ SOURCEURL text
 );
